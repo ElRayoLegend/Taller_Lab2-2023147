@@ -14,6 +14,41 @@ JWT_SECRET=<tu_secreto_jwt>
 
 ## Endpoints de la API
 
+## Funcionalidades Adicionales
+
+Las siguientes funcionalidades necesitan ser desarrolladas:
+
+1. **Actualizar Foto del Usuario**
+  - **URL:** `/api/user/updateImage:uid`
+  - **Método:** `PATCH`
+  - **Cuerpo:**
+    ```json
+    {
+      "profilePicture": "file"
+    }
+    ```
+
+2. **Listar Citas**
+  - **URL:** `/api/appointment/`
+  - **Método:** `GET`
+
+3. **Actualizar Cita**
+   - **URL:** `/api/appointment/updateAppointment:uid`
+  - **Método:** `PUT`
+  - **Cuerpo:**
+    ```json
+    {
+      "date": "2029-10-15T14:48:00.000Z",
+      "status": "status",
+      "pet": "uid",
+      "user": "uid"
+    }
+    ```
+
+4. **Cancelar Cita**
+  - **URL:** `/api/appointment/cancellAppointment:uid`
+  - **Método:** `PATCH`
+
 ### Citas
 
 - **Crear Cita**
@@ -109,37 +144,3 @@ JWT_SECRET=<tu_secreto_jwt>
     }
     ```
 
-## Funcionalidades Adicionales
-
-Las siguientes funcionalidades necesitan ser desarrolladas:
-
-1. **Actualizar Foto del Usuario**
-  - **URL:** `/api/user/updateImage:uid`
-  - **Método:** `PATCH`
-  - **Cuerpo:**
-    ```json
-    {
-      "newImg": "string"
-    }
-    ```
-
-2. **Listar Citas**
-  - **URL:** `/api/appointment/`
-  - **Método:** `GET`
-
-3. **Actualizar Cita**
-   - **URL:** `/api/appointment/updateAppointment:uid`
-  - **Método:** `PUT`
-  - **Cuerpo:**
-    ```json
-    {
-      "date": "2029-10-15T14:48:00.000Z",
-      "status": "status",
-      "pet": "uid",
-      "user": "uid"
-  }
-      ```
-
-4. **Cancelar Cita**
-  - **URL:** `/api/appointment/cancellAppointment:uid`
-  - **Método:** `PATCH`
